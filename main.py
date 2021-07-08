@@ -16,7 +16,7 @@ def index():
     if "管理员邮箱" in order_data:
         mail = order_data['管理员邮箱']
 
-    return mail
+    return mail if mail else ""
 
 
 if __name__ == '__main__':

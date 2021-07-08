@@ -4,9 +4,10 @@ import os
 app = Flask(__name__)
 
 
-@app.route('/')
+@app.route('/', methods = ['POST'])
 def index():
-    return jsonify({"Choo Choo": "Welcome to your Flask app 🚅 sss:wq"})
+    order_data = request.get_json() # 
+    return order_data['机构管理员邮箱']
 
 
 if __name__ == '__main__':
